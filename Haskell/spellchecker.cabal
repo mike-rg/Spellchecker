@@ -1,0 +1,24 @@
+name:           spellchk
+version:        1.0
+cabal-version:  >= 1.8
+build-type:     Simple
+author:         Miguel
+
+executable spellchk
+  hs-source-dirs:  src
+  main-is:         Main.hs
+  build-depends:   
+                   base >= 4
+                   , cmdargs >= 0.10.1
+                   , containers
+                   , mtl
+                   , strict >= 0.3.2
+                   , filepath
+                   
+  ghc-options:     -O2 -Wall -rtsopts
+  other-modules:   
+                   Dictionary,
+                   Document,
+                   CommandLine                   
+  extensions:      
+                   ScopedTypeVariables
